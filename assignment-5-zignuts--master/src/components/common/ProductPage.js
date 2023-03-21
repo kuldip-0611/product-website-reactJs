@@ -39,8 +39,8 @@ const ProductPage = () => {
       <Container>
         <Row>
           {productData.products.products ? (
-            productData.products.products.map((item) => (
-              <ProductCard item={item} key={item.id} />
+            productData.products.products.map((item,index) => (
+              <ProductCard item={item} key={index} />
             ))
           ) : (
             <div className="d-flex justify-content-center">

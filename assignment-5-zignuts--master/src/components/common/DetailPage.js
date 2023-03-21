@@ -20,7 +20,7 @@ const DetailPage = () => {
   return (
     <>
       <div className="main-content row">
-        <div className="product-images col col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 ">
+        <div className="product-images col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 ">
           <Carousel className="m-5">
             {data.images
               ? data.images.map((item) => (
@@ -29,7 +29,7 @@ const DetailPage = () => {
                       className="d-block w-100"
                       src={item}
                       alt="First slide"
-                      key = {item}
+                      key = {item.id}
                     />
                     <Carousel.Caption>
                       <h3>First slide product image</h3>
@@ -43,7 +43,7 @@ const DetailPage = () => {
               : "loading"}
           </Carousel>
         </div>
-        <div className="details col col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-5">
+        <div className="details  col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-5">
           <div className="heading h1 text-center  mt-5 text-secondary ">
             <span>{data.title}</span>
           </div>
