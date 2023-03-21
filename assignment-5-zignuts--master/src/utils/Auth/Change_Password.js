@@ -22,7 +22,7 @@ export const Change_Password = (values) =>{
       toast.error(messages.Password_Invalid);
     } else {
       ActiveUser.password = encryptData(values.edit_password);
-      toast.success(messages. Passwod_Updated);
+      toast.success(messages.Passwod_Updated);
       const newLoginData = inobjData.map((item) => {
         if (item.isActive) {
           item = ActiveUser;

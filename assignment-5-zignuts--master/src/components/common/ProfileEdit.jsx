@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Button } from "reactstrap";
 import { Edit_profilevalidation } from "../../constants/validation";
-import { getProfile_data, Profile_initialState, Update_profile_data } from "../../utils/Auth/Change_Profile";
+import { getProfile_data, Update_profile_data } from "../../utils/Auth/Change_Profile";
 
 console.log(localStorage.getItem("loginData"));
 const ProfileEdit = () => {
@@ -19,12 +19,7 @@ const ProfileEdit = () => {
   };
 
   const handleSubmit = (values) => {
-    // console.log(values);
-    // data[0].fname = values.fname;
-    // data[0].lname = values.lname;
-    // data[0].email = values.email;
-    // data[0].mobile = values.mobile;
-
+   
     Update_profile_data(values);
     
     

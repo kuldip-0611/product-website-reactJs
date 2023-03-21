@@ -32,6 +32,7 @@ export const Update_profile_data = (values) => {
             }
 
         }
+        return item
     })
     console.log(counter);
 

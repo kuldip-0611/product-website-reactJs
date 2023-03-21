@@ -8,6 +8,7 @@ export const Login_Auth = (values) => {
     const inobjData = JSON.parse(data);
     inobjData.map((item) => {
         item.isActive = false;
+        return item
     });
 
     
@@ -27,7 +28,7 @@ export const Login_Auth = (values) => {
         toast.success(messages.Login_Success);
         localStorage.setItem("isLogin", true);
         localStorage.setItem('loginData', JSON.stringify(inobjData));
-        // navigate("/products");
+       
     } else {
         toast.error(messages.Login_Error);
     }

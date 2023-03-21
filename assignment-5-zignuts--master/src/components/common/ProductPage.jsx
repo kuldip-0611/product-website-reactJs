@@ -3,7 +3,7 @@ import { fetchData } from "../../redux/reducers/Set_Product";
 import { useSelector, useDispatch } from "react-redux";
 import ProductCard from "./ProductCard";
 import Pagination from "react-bootstrap/Pagination";
-import { Row, Container, Col } from "reactstrap";
+import { Row, Container} from "reactstrap";
 import { Puff } from "react-loader-spinner";
 
 const ProductPage = () => {
@@ -19,7 +19,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     dispatch(fetchData(active * 8));
-  }, [active]);
+  }, [active,dispatch]);
 
   let items = [];
   for (let number = 0; number <= productData.total / 8; number++) {

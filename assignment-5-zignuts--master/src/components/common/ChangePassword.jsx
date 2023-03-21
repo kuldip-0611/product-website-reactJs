@@ -2,9 +2,7 @@ import React from "react";
 
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { Button } from "reactstrap";
-import DecryptData from "../../utils/Password_decryption";
-import { encryptData } from "../../utils/password_encryption";
-import { toast } from "react-hot-toast";
+
 import { Change_Passwordvalidation } from "../../constants/validation";
 import {
   ChangePassword_initialState,

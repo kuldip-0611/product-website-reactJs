@@ -18,9 +18,9 @@ import { messages } from "../constants/messages";
 const ProductHeader = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
+ 
   const [data, setData] = useState(false);
-  const toggle = () => setIsOpen(!isOpen);
+  
 
   console.log(data);
   useEffect(() => {
@@ -65,7 +65,7 @@ const ProductHeader = () => {
         </Nav>
         <NavbarText>
           <button className="border border-none">
-            <img src={profile} height="50px" />
+            <img src={profile} height="50px" alt="this is pictur" />
           </button>
         </NavbarText>
       </Navbar>

@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react'
-import { Navigate, Outlet, useNavigate } from 'react-router';
+import React from 'react'
+import { Navigate, Outlet } from 'react-router';
 
 const PrivateRoute = () => {
-  const navigate = useNavigate();
+ 
 
   let isLogin = localStorage.getItem("isLogin");
   let isActive = false;

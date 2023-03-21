@@ -1,12 +1,12 @@
 import React from "react";
-import { Row, Col, Button, Container, NavLink } from "reactstrap";
+import { Col} from "reactstrap";
 import {
   MDBCard,
   MDBCardImage,
   MDBCardBody,
   MDBCardTitle,
   MDBCardText,
-  MDBCardLink,
+
   MDBListGroup,
   MDBListGroupItem,
 } from "mdb-react-ui-kit";
@@ -15,7 +15,6 @@ import {
 import { BsCurrencyDollar } from "react-icons/bs";
 import {AiOutlinePercentage} from 'react-icons/ai';
 import {MdOutlineStarOutline} from 'react-icons/md';
-import { Navigate, useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 
 const ProductCard = ({ item }) => {

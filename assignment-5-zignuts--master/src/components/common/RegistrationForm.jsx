@@ -1,12 +1,10 @@
 import React, { useEffect} from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import * as yup from "yup";
-import { encryptData } from "../../utils/password_encryption";
-import LoginForm from "./LoginFrom";
+
+
 import { useNavigate } from "react-router";
-import { toast } from "react-hot-toast";
+
 import AddataToLocal, { initialState } from "../../utils/addToLocalStorage";
-import ProductPage from "./ProductPage";
 import { Button, NavLink } from "reactstrap";
 import { Registrationvalidation } from "../../constants/validation";
 

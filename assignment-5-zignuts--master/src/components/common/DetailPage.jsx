@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import { productsIndividual } from "../../utils/ApiCall";
+
 import { useParams } from "react-router-dom";
 import {BsCurrencyDollar} from 'react-icons/bs';
 import {MdOutlineStarOutline} from 'react-icons/md';
