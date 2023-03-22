@@ -10,10 +10,10 @@ import {
   Button,
 } from "reactstrap";
 
-import profile from "../assets/images/profile.jpg";
-import { Handle_Logout } from "../utils/Auth/Logout_Auth";
+import profile from "../../assets/images/profile.jpg";
+import { Handle_Logout } from "../../utils/Auth/Logout_Auth";
 import toast from 'react-hot-toast';
-import { messages } from "../constants/messages";
+import { messages } from "../../constants/toast_messages";
 
 const ProductHeader = () => {
   const navigate = useNavigate();

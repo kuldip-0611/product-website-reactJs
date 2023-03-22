@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../redux/reducers/Set_Product";
 import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "./ProductCard";
+import ProductCard from "../../components/common/ProductCard";
 import Pagination from "react-bootstrap/Pagination";
 import { Row, Container} from "reactstrap";
 import { Puff } from "react-loader-spinner";
