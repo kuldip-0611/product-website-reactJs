@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast";
-import { messages } from "../../constants/messages";
+import { messages } from "../../constants/toast_messages";
 
 export const getProfile_data = () => {
     const data = localStorage.getItem("loginData");

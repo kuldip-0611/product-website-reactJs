@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { fetchData } from "../../redux/reducers/Set_Product";
 import { useSelector, useDispatch } from "react-redux";
-import ProductCard from "./ProductCard";
+import ProductCard from "../../components/common/ProductCard";
 import Pagination from "react-bootstrap/Pagination";
-import { Row, Container} from "reactstrap";
+import { Row, Container } from "reactstrap";
 import { Puff } from "react-loader-spinner";
 
 const ProductPage = () => {
@@ -19,7 +19,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     dispatch(fetchData(active * 8));
-  }, [active,dispatch]);
+  }, [active, dispatch]);
 
   let items = [];
   for (let number = 0; number <= productData.total / 8; number++) {
@@ -39,7 +39,7 @@ const ProductPage = () => {
       <Container>
         <Row>
           {productData.products.products ? (
-            productData.products.products.map((item,index) => (
+            productData.products.products.map((item, index) => (
               <ProductCard item={item} key={index} />
             ))
           ) : (

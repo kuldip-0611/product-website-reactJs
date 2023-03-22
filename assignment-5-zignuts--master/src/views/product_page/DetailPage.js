@@ -23,13 +23,13 @@ const DetailPage = () => {
         <div className="product-images col-xxl-6 col-xl-6 col-lg-12 col-md-12 col-sm-12 ">
           <Carousel className="m-5">
             {data.images
-              ? data.images.map((item) => (
-                  <Carousel.Item>
+              ? data.images.map((item,index) => (
+                  <Carousel.Item key = {index}>
                     <img
                       className="d-block w-100"
                       src={item}
                       alt="First slide"
-                      key = {item.id}
+                      
                     />
                     <Carousel.Caption>
                       <h3>First slide product image</h3>

@@ -8,7 +8,8 @@ const PrivateRoute = () => {
   let isActive = false;
   if (localStorage.getItem('isLogin') === null || localStorage.getItem('loginData') === null) {
     localStorage.setItem('isLogin', false);
-    window.location.replace('http://localhost:3000/login')
+    // window.location.replace('http://localhost:3000/login')
+    <Navigate to='/login' />
   } else {
     isLogin = JSON.parse(localStorage.getItem('isLogin'))
     isActive = (JSON.parse(localStorage.getItem('loginData'))).some(item => item.isActive)
