@@ -35,8 +35,9 @@ function LoginForm() {
     }
   }, [navigate]);
   const handleSubmit = (values) => {
-    Login_Auth(values);
-    navigate("/products");
+    if (Login_Auth(values)) {
+      navigate("/products");
+    }
   };
   return (
     <>

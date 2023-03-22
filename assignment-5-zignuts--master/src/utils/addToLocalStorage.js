@@ -2,6 +2,7 @@ import { toast } from "react-hot-toast";
 import { messages } from "../constants/toast_messages";
 
 import { encryptData } from "../utils/password_encryption";
+/* Getting the data from local storage and then parsing it into an object. */
 
 let arr = [];
 
@@ -29,6 +30,7 @@ const AddataToLocal = (values) => {
     else {
         arr.push(values)
 
+       /* This is the code for storing the data in local storage. */
         const encrypted_password = encryptData(values.password);
         values.password = encrypted_password;
         const encrypted_resetpassword = encryptData(values.repeatpassword);
