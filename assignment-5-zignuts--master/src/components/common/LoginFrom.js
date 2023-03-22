@@ -80,7 +80,7 @@ function LoginForm() {
                       type="email"
                       name="email"
                       className="w-100 form-control"
-                      id="email"
+                      id="login_email"
                     />
                     <p className="text-danger">
                       <ErrorMessage name="email" />
@@ -91,7 +91,7 @@ function LoginForm() {
                       type="password"
                       name="password"
                       className="w-100 form-control"
-                      id="password"
+                      id="login_password"
                     />
                     <p className="text-danger">
                       <ErrorMessage name="password" />
@@ -101,6 +101,7 @@ function LoginForm() {
                       type="submit"
                       className="mb-4 px-5"
                       color="dark"
+                      id='loginBtn'
                     >
                       Login
                     </MDBBtn>

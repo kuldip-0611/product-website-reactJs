@@ -1,7 +1,7 @@
 export const messages = {
     //password updated message
     Passwod_Updated:"Password updated successfull",
-    Password_Invalid : "current password mismatch",
+    Password_Invalid : "current password mismatch with old password",
     Passowrd_Same:"edited password is same as current password",
 
     //profile update messages

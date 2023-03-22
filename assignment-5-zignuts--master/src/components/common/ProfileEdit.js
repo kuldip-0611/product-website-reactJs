@@ -38,7 +38,7 @@ const ProfileEdit = () => {
             type="text"
             name="fname"
             className="w-100 form-control"
-            id="form3Example1c"
+            id="profile_edit_fname"
           />
           <p className="text-danger">
             <ErrorMessage name="fname" />
@@ -48,20 +48,20 @@ const ProfileEdit = () => {
             type="text"
             name="lname"
             className="w-100 form-control"
-            id="form3Example1c"
+            id="profile_edit_lname"
           />
 
           <label className="form-label">Your Email</label>
           <Field type="email" name="email" className="w-100 form-control" />
           <p className="text-danger">
-            <ErrorMessage name="email" />
+            <ErrorMessage name="email" id="profile_edit_email" />
           </p>
           <label className="form-label">Mobile Number</label>
-          <Field type="number" name="mobile" className="w-100 form-control" />
+          <Field type="number" name="mobile" className="w-100 form-control" id="profile_edit_mobile" />
           <p className="text-danger">
             <ErrorMessage name="mobile" />
           </p>
-          <Button type="submit">Submit</Button>
+          <Button type="submit" id="change_profile_submit">Submit</Button>
         </Form>
       </Formik>
     </div>

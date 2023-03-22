@@ -32,6 +32,7 @@ const ChangePassword = () => {
             type="password"
             name="current_password"
             className="w-100 form-control bg-secondary"
+            id="current_password"
           />
           <p className="text-danger">
             <ErrorMessage name="current_password" />
@@ -41,6 +42,7 @@ const ChangePassword = () => {
             type="password"
             name="edit_password"
             className="w-100 form-control bg-secondary"
+            id="edit_password"
           />
           <p className="text-danger">
             <ErrorMessage name="edit_password" />
@@ -50,11 +52,12 @@ const ChangePassword = () => {
             type="password"
             name="confirm_edit_password"
             className="w-100 form-control bg-secondary"
+            id="confirm_edit_password"
           />
           <p className="text-danger">
             <ErrorMessage name="confirm_edit_password" />
           </p>
-          <Button type="submit">Submit</Button>
+          <Button type="submit" id='change_password_btn'>Submit</Button>
         </Form>
       </Formik>
     </div>

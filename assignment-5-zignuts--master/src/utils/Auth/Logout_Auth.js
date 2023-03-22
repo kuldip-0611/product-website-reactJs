@@ -1,5 +1,4 @@
 
-
 export const Handle_Logout = () => {
  /* Setting the value of isLogin to false. */
   localStorage.setItem("isLogin", false);

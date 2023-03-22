@@ -14,6 +14,7 @@ import profile from "../../assets/images/profile.jpg";
 import { Handle_Logout } from "../../utils/Auth/Logout_Auth";
 import toast from 'react-hot-toast';
 import { messages } from "../../constants/toast_messages";
+import DecryptData from "../../utils/Password_decryption";
 
 const ProductHeader = () => {
   const navigate = useNavigate();
@@ -34,7 +35,9 @@ const ProductHeader = () => {
   };
 
   return (
+   
     <div>
+       {console.log(DecryptData('U2FsdGVkX18doIGbiIglkD2ON0AAo7jwg8HasdqZoN8='))}
       <Navbar>
         <NavbarBrand href="/">Shopping App</NavbarBrand>
 
@@ -47,12 +50,12 @@ const ProductHeader = () => {
             )}
             {data && (
               <NavLink to="/change_password">
-                <Button className="bg-secondary">Change password</Button>
+                <Button className="bg-secondary" id='change_password'>Change password</Button>
               </NavLink>
             )}
             {data && (
               <NavLink to="/editprofile">
-                <Button className="bg-success">Edit Profile</Button>
+                <Button className="bg-success" id="change_profile">Edit Profile</Button>
               </NavLink>
             )}
 

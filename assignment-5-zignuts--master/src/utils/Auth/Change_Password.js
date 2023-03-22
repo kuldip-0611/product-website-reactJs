@@ -1,12 +1,12 @@
 import { toast } from "react-hot-toast";
-import { messages } from "../../constants/messages";
+import { messages } from "../../constants/toast_messages";
 import DecryptData from "../Password_decryption";
 import { encryptData } from "../password_encryption";
 
 export const ChangePassword_initialState = {
-    current_password: "Kuldip@0611",
-    edit_password: "Desai#0611",
-    confirm_edit_password: "Desai#0611",
+    current_password: "",
+    edit_password: "",
+    confirm_edit_password: "",
   };
 
 export const Change_Password = (values) =>{
@@ -23,6 +23,7 @@ export const Change_Password = (values) =>{
     } /* This is checking if the current password is the same as the password in the local storage. */
    
     else if (DecryptData(ActiveUser.password) !== values.current_password) {
+      console.log('true');
       toast.error(messages.Password_Invalid);
     }
      /* This is checking if the current password is the same as the password in the local storage. */

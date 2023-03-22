@@ -11,7 +11,12 @@ describe('registration',()=>{
 
         cy.get('button[type="submit"]').click();
 
-        cy.url().should('include','/products');
+       
+
+       cy.window().then(win=>{
+        localStorage.setItem('isLogin', true);
+       })
+       cy.url().should('include', '/products');
 
     })
 })
