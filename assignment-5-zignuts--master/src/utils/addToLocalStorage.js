@@ -6,13 +6,13 @@ import { encryptData } from "../utils/password_encryption";
 let arr = [];
 
 export const initialState = {
-    fname: "kuldip",
-    lname: "pandya",
-    email: "pandya@gmail.com",
-    password: "Kuldip@0611",
-    repeatpassword: "Kuldip@0611",
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+    repeatpassword: "",
     isActive: false,
-    mobile: "89211374628",
+    mobile: "",
 };
 
 const AddataToLocal = (values) => {
