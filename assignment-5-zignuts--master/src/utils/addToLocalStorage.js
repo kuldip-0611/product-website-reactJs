@@ -6,13 +6,13 @@ import { encryptData } from "../utils/password_encryption";
 let arr = [];
 
 export const initialState = {
-    fname: "kuldip",
-    lname: "pandya",
-    email: "pandya@gmail.com",
-    password: "Kuldip@0611",
-    repeatpassword: "Kuldip@0611",
+    fname: "",
+    lname: "",
+    email: "",
+    password: "",
+    repeatpassword: "",
     isActive: false,
-    mobile: "89211374628",
+    mobile: "",
 };
 
 const AddataToLocal = (values) => {
@@ -24,11 +24,13 @@ const AddataToLocal = (values) => {
     }
 
     if (arr.some(item => item.email === values.email)) {
+        /* A function that is used to display error message. */
         toast.error(messages.Registartion_User_exists)
     }
     else {
         arr.push(values)
 
+        /* This is the code for storing the data in local storage. */
         const encrypted_password = encryptData(values.password);
         values.password = encrypted_password;
         const encrypted_resetpassword = encryptData(values.repeatpassword);

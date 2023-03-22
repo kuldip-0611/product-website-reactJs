@@ -42,7 +42,7 @@ const ProductHeader = () => {
           <NavItem className="d-flex gap-3">
             {data && (
               <NavLink to="/login" onClick={handleLogout}>
-                <Button className="bg-danger">LogOut</Button>
+                <Button className="bg-danger" id="logout">LogOut</Button>
               </NavLink>
             )}
             {data && (

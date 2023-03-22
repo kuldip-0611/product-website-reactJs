@@ -12,15 +12,21 @@ export const ChangePassword_initialState = {
 export const Change_Password = (values) =>{
     console.log(values);
 
+    /* Getting the data from local storage and converting it into an object. */
     const data = localStorage.getItem("loginData");
     const inobjData = JSON.parse(data);
 
     const ActiveUser = inobjData.find((item) => item.isActive);
+    /* This is checking if the new password is the same as the old password. */
     if (DecryptData(ActiveUser.password) === values.edit_password) {
       toast.error(messages.Passowrd_Same);
-    } else if (DecryptData(ActiveUser.password) !== values.current_password) {
+    } /* This is checking if the current password is the same as the password in the local storage. */
+   
+    else if (DecryptData(ActiveUser.password) !== values.current_password) {
       toast.error(messages.Password_Invalid);
-    } else {
+    }
+     /* This is checking if the current password is the same as the password in the local storage. */
+    else {
       ActiveUser.password = encryptData(values.edit_password);
       toast.success(messages.Passwod_Updated);
       const newLoginData = inobjData.map((item) => {
