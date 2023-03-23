@@ -24,6 +24,7 @@
     "react-router-dom": "^6.9.0",
     "react-scripts": "5.0.1",
     "reactstrap": "^9.1.6",
+    "redux-devtools-extension": "^2.13.9",
     "web-vitals": "^2.1.4",
     "yup": "^1.0.2"
   },
@@ -32,7 +33,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
-    
   },
   "eslintConfig": {
     "extends": [
@@ -53,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "cypress": "^12.8.1"
+    "cypress": "^12.8.1",
+    "cypress-react-selector": "^3.0.0"
   }
 }

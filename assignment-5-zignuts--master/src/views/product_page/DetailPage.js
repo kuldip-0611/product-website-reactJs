@@ -1,21 +1,29 @@
-import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {BsCurrencyDollar} from 'react-icons/bs';
 import {MdOutlineStarOutline} from 'react-icons/md';
 import {AiOutlinePercentage} from 'react-icons/ai';
+import { apiCall } from "../../utils/apiCall";
 
 const DetailPage = () => {
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   const { id } = useParams();
-  useEffect(() => {
-    axios
-      .get(`https://dummyjson.com/products/${id}`)
-      .then((res) => setData(res.data))
-      .catch((error) => console.log(error));
-  }, [id]);
+  
+
+  useEffect(()=>{
+    if(isNaN(id)){
+      navigate("/products");
+    }
+    const fetchData = async () => {
+      const response = await apiCall(id);
+      setData(response);
+    }
+    fetchData();
+  })
 
   return (
     <>
@@ -30,14 +38,7 @@ const DetailPage = () => {
                       src={item}
                       alt="First slide"
                       key = {item.id}
-                    />
-                    <Carousel.Caption>
-                      <h3>First slide product image</h3>
-                      <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                      </p>
-                    </Carousel.Caption>
+                    /> 
                   </Carousel.Item>
                 ))
               : "loading"}

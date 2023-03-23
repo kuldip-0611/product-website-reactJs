@@ -8,7 +8,6 @@ describe('login',()=>{
                 password:'U2FsdGVkX18doIGbiIglkD2ON0AAo7jwg8HasdqZoN8='
             }]))
         })
-        
         cy.visit("http://localhost:3000/login");
 
         cy.get('#login_email').type('john@gmail.com');

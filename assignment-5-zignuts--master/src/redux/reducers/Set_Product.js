@@ -1,11 +1,12 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
 import axios from 'axios'
 
 const initialState = {
   loading: false,
   products: [],
   error: '',
-  total:100
+  total: 100
 }
 
 export const fetchData = createAsyncThunk('product/fetchData', (skip) => {

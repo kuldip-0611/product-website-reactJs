@@ -1,5 +1,5 @@
 import { toast } from "react-hot-toast";
-import { messages } from "../constants/messages";
+import { messages } from "../constants/toast_messages";
 
 import { encryptData } from "../utils/password_encryption";
 

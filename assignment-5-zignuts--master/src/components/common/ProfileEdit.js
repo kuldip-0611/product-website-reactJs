@@ -12,10 +12,10 @@ const ProfileEdit = () => {
 
   
   const initialState = {
-    fname: data[0].fname,
-    lname: data[0].lname,
-    email: data[0].email,
-    mobile: data[0].mobile,
+    fname: '',
+    lname: '',
+    email: '',
+    mobile: '',
   };
 
   const handleSubmit = (values) => {
@@ -52,9 +52,9 @@ const ProfileEdit = () => {
           />
 
           <label className="form-label">Your Email</label>
-          <Field type="email" name="email" className="w-100 form-control" />
+          <Field type="email" name="email" className="w-100 form-control" id="profile_edit_email" />
           <p className="text-danger">
-            <ErrorMessage name="email" id="profile_edit_email" />
+            <ErrorMessage name="email" />
           </p>
           <label className="form-label">Mobile Number</label>
           <Field type="number" name="mobile" className="w-100 form-control" id="profile_edit_mobile" />

@@ -2,11 +2,12 @@ import React from 'react';
 import ProfileEdit from '../components/common/ProfileEdit';
 import ChangePassword from '../components/common/ChangePassword';
 import PrivateRoute from '../routes/PrivateRoute';
-import DetailPage from '../components/common/DetailPage';
-import ProductPage from '../components/common/ProductPage';
+import DetailPage from '../views/product_page/DetailPage';
+import ProductPage from '../views/product_page/ProductPage';
 import { Routes, Route, Navigate} from 'react-router-dom';
 import RegistrationForm from '../components/common/RegistrationForm';
 import LoginForm from '../components/common/LoginFrom';
+import PageNotFound from '../components/common/PageNotFound';
 
 const PrivateRoutes = () => {
   return (
@@ -20,6 +21,7 @@ const PrivateRoutes = () => {
           <Route path='/products/:id' element={<DetailPage />} />
         </Route>
         <Route path='/login' element={<LoginForm />} />
+        <Route path='*' element={<PageNotFound />} />
 
         <Route path='/registration' element={<RegistrationForm />} />
 

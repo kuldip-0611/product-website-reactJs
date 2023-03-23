@@ -36,13 +36,13 @@ const ProductHeader = () => {
 
   return (
    
-    <div>
+    <div className="container">
        {console.log(DecryptData('U2FsdGVkX18doIGbiIglkD2ON0AAo7jwg8HasdqZoN8='))}
       <Navbar>
-        <NavbarBrand href="/">Shopping App</NavbarBrand>
+        <NavbarBrand href="/" className="text-sm-center">Shopping App</NavbarBrand>
 
         <Nav className="m-auto" navbar>
-          <NavItem className="d-flex gap-3">
+          <NavItem className="d-flex flex-wrap text-sm-center justify-content-center gap-3">
             {data && (
               <NavLink to="/login" onClick={handleLogout}>
                 <Button className="bg-danger" id="logout">LogOut</Button>
@@ -61,13 +61,13 @@ const ProductHeader = () => {
 
             {data && (
               <NavLink to="/products">
-                <Button className="bg-primary">Products</Button>
+                <Button className="bg-primary" id="products">Products</Button>
               </NavLink>
             )}
           </NavItem>
         </Nav>
         <NavbarText>
-          <button className="border border-none">
+          <button className="border border-none ">
             <img src={profile} height="50px" alt="this is pictur" />
           </button>
         </NavbarText>
