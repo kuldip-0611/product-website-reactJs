@@ -1,6 +1,6 @@
 /* eslint-disable */
-import store from '../../../src/redux/store/store';
-import {fetchData} from '../../../src/redux/reducers/Set_Product';
+import store from '../../../../src/redux/store/store';
+import {fetchData} from '../../../../src/redux/reducers/Set_Product';
 describe('redux actions teting', () => {
    
     it('fetch data started and set loading is false ',()=>{
