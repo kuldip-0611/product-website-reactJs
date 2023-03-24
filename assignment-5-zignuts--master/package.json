@@ -54,6 +54,7 @@
   },
   "devDependencies": {
     "cypress": "^12.8.1",
-    "cypress-react-selector": "^3.0.0"
+    "cypress-react-selector": "^3.0.0",
+    "cypress-slow-down": "^1.2.1"
   }
 }

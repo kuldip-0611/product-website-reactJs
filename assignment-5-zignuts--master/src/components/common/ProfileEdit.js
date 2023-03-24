@@ -12,10 +12,10 @@ const ProfileEdit = () => {
 
   
   const initialState = {
-    fname: '',
-    lname: '',
-    email: '',
-    mobile: '',
+    fname: data[0].fname,
+    lname: data[0].lname,
+    email: data[0].email,
+    mobile: data[0].mobile,
   };
 
   const handleSubmit = (values) => {

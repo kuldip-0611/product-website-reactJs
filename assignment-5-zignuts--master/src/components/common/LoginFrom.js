@@ -17,6 +17,7 @@ import { Loginvalidation } from "../../constants/validation";
 
 
 import { Login_Auth } from "../../utils/Auth/Login_Auth";
+import { toast } from "react-hot-toast";
 
 const initialState = {
   email: "",
@@ -35,8 +36,13 @@ function LoginForm() {
     }
   }, [navigate]);
   const handleSubmit = (values) => {
+    if (localStorage.getItem('loginData') == null) {
+      toast.error("there is no login data");
+    }
+    else {
     Login_Auth(values);
     navigate("/products");
+  }
   };
   return (
     <>
@@ -110,7 +116,7 @@ function LoginForm() {
 
                 <p className="mb-5 pb-lg-2" style={{ color: "#393f81" }}>
                   Don't have an account?{" "}
-                  <NavLink to="/registration" style={{ color: "#393f81" }}>
+                  <NavLink to="/registration" style={{ color: "#393f81" }} id='registre_user'>
                     Register here
                   </NavLink>
                 </p>

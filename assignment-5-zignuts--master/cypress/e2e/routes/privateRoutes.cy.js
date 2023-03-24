@@ -9,8 +9,8 @@ describe('private routes',()=>{
     it('allow user to access protexted routes',()=>{
         
         cy.window().then(win=>{
-            localStorage.setItem('isLogin', true);
-            localStorage.setItem('loginData', JSON.stringify([{
+            win.localStorage.setItem('isLogin', true);
+            win.localStorage.setItem('loginData', JSON.stringify([{
                 fname: 'john',
                 lname: 'doe',
                 email: 'john@gmail.com',

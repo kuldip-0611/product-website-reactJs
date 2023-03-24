@@ -60,7 +60,7 @@ const ProductCard = ({ item }) => {
           <MDBCardBody>
             <Link to={`/products/${item.id}`}>
               <div className="d-flex justify-content-center ">
-                <button className="btn btn-secondary w-100 text-decoration: inherit;">Detail</button>
+                <button className="btn btn-secondary w-100 text-decoration: inherit;" id="detail-btn">Detail</button>
               </div>
             </Link>
           </MDBCardBody>
