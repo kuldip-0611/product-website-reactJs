@@ -31,13 +31,7 @@ const DetailPage = () => {
                       alt="First slide"
                       
                     />
-                    <Carousel.Caption>
-                      <h3>First slide product image</h3>
-                      <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                      </p>
-                    </Carousel.Caption>
+                   
                   </Carousel.Item>
                 ))
               : "loading"}

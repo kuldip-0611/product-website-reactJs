@@ -1,5 +1,5 @@
 import CryptoJS from 'crypto-js';
-const SECRET_PASS = process.env.REACT_APP_PASS;
+const SECRET_PASS = 'process.env.REACT_APP_PASS';
 export const encryptData = (password) => {
  /* Encrypting the data. */
  

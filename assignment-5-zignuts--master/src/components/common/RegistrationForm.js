@@ -19,8 +19,8 @@ const RegistrationForm = () => {
   }, [navigate]);
 
   const handleSubmit = (values) => {
+    console.log(values);
     AddataToLocal(values);
-
     navigate("/products");
   };
 
@@ -158,7 +158,7 @@ const RegistrationForm = () => {
                               to={"/login"}
                               className="d-flex justify-content-center"
                             >
-                              <Button className="bg-secondary ">
+                              <Button className="bg-secondary">
                                 Already Account ? Login
                               </Button>
                             </NavLink>
